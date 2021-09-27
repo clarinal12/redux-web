@@ -1,34 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Directory Structure
 
-## Getting Started
+The top level directory structure will be as follows:
 
-First, run the development server:
+- assets - global static assets such as images, svgs, company logo, etc.
+- components - global shared/reusable components, such as layout (wrappers, navigation), form components, buttons
+- modules - JavaScript modules (all components under specific page should go here, e.g. **modules/dashboard/component.tsx** will contain components rendered in **pages/dashboard.tsx**)
+- store - Global Redux store
+- utils - Utilities & helper functions and the like
+- pages - NextJS page files
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Path aliasing
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Added path aliasing **(@folder-name)** is used to easily determine which files were imported locally and from library, this is very helpful for better organization of imports. Library imports should come first then local.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## We use this tools
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [ESLint](https://eslint.org/docs/user-guide/configuring/)
+- [Husky](https://typicode.github.io/husky/#/)
+- [Prettier](https://prettier.io/)
+- [Lint Staged](https://github.com/okonet/lint-staged)
+- [npm-check-updates](https://www.npmjs.com/package/npm-check-updates)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### [Structure reference](https://www.taniarascia.com/react-architecture-directory-structure)
