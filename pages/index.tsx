@@ -1,7 +1,7 @@
 import { GetServerSideProps } from "next";
 import { getToken } from "utils/auth";
 
-const Home: React.FC = () => <div>Home Page Updated</div>;
+const Home: React.FC = () => <div>Home Page</div>;
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const token = getToken(ctx);
